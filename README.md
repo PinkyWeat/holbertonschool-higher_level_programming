@@ -20,7 +20,7 @@ I'm currently starting with the programming language **Python**. I am nowhere ne
 
 ## Author
 
-Denisse Landau
+Written by [Denisse Landau](https://www.linkedin.com/in/denisselandau/ "Denisse Landau")
 
 ---
 

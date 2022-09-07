@@ -16,7 +16,7 @@ First steps towards being a Python Mage.
 
 ---
 
-### Compilation
+### given permits: chmod u+x
 
 ---
 
@@ -29,7 +29,9 @@ First steps towards being a Python Mage.
 - **4-print-float.py** - contains a script that prints a float.
 - **5-print-string.py** - contains a script that prints a string.
 - **6-concat.py** - contains a script that prints a specific sentence.
-- **7-edges.py** - contains a script ... _//under construction//_
+- **7-edges.py** - contains a script which prints parts of a given word.
+- **8-concat-edges.py** - contains a script which concats strings.
+- **9-easter-egg.py** - contains a script which prints _"The Zen of Python", by TimPeters.
 
 ---
 ### Author

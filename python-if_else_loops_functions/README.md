@@ -1,9 +1,10 @@
-# Python - f/else
-#	 - loops
-#	 - functions
+# Python - f/else, loops, functions
+
 ---
 
 ## Description
+
+Info
 
 ---
 

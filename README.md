@@ -10,7 +10,10 @@ I'm currently starting with the programming language **Python**. I am nowhere ne
 
 ## File Description
 
-**-->** ``python-hello_world`` - *//currently under construction//*
+#### Directories
+
+**-->** ``python-hello_world`` - First project of mine in Python. Basics of printing values.
+**-->** ``python-if_else_loops_functions`` - Project covers if/else, loops and functions. 
 
 ---
 

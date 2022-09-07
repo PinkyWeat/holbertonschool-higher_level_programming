@@ -16,7 +16,7 @@ First steps towards being a Python Mage.
 
 ---
 
-### given permits: chmod u+x
+### Given permits: ``chmod u+x``
 
 ---
 
@@ -31,7 +31,7 @@ First steps towards being a Python Mage.
 - **6-concat.py** - contains a script that prints a specific sentence.
 - **7-edges.py** - contains a script which prints parts of a given word.
 - **8-concat-edges.py** - contains a script which concats strings.
-- **9-easter-egg.py** - contains a script which prints _"The Zen of Python", by TimPeters.
+- **9-easter-egg.py** - contains a script which prints _"The Zen of Python"_, by TimPeters.
 
 ---
 ### Author

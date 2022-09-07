@@ -40,7 +40,7 @@ A [function](https://www.w3schools.com/python/python_functions.asp) is a block o
 
 ``0-positive-or-negative.py`` - program assigns a random signed number to the variable ``number`` each time it is executed.
 
-``1-last-digit.py`` - program assigns a random signed number to the variable number each time it is executed.
+``1-last-digit.py`` - program assigns a random signed number to the variable ``number`` each time it is executed.
 
 ``2-print-alphabet.py`` - program prints the ASCII alphabet, in lowercase.
 

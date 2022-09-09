@@ -1,11 +1,4 @@
 #!/usr/bin/python3
 i = 0
-while i != 100:
-    if i == 99:
-       print(f"{i}")
-       break
-    if i < 10:
-        print(f"0{i}, ", end="")
-    else:
-        print(f"{i}, ", end="")
-    i = i + 1
+for i in range(0, 100):
+    print("{:02} ".format(i), end="," if i != 99 else "\n")

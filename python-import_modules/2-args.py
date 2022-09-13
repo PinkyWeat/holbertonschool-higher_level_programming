@@ -11,4 +11,3 @@ if __name__ == "__main__":
     for arg in sys.argv[1:]:
         print(f"{e}: {arg}")
         e += 1
-

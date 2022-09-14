@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-from re import M
-
-
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
         i = 0

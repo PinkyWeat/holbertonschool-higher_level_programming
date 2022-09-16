@@ -1,8 +1,4 @@
-##!/usr/bin/python3
-from dataclasses import replace
-from os import remove
-
-
+#!/usr/bin/python3
 def delete_at(my_list=[], idx=0):
     if my_list == 0:
         return None

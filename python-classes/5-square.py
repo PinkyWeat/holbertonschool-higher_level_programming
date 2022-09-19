@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """Define a Square class"""
 
-from logging.config import valid_ident
-from multiprocessing.sharedctypes import Value
-
 
 class Square:
     """"a Square"""

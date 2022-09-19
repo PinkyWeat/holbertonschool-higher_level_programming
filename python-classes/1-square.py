@@ -3,6 +3,7 @@
 Empty class Square + attribute size.
 """
 
+
 class Square:
     """A class
     a square

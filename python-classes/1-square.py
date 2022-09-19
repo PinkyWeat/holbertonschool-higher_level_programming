@@ -5,7 +5,12 @@ Empty class Square + attribute size.
 
 class Square:
     """A class
-    Square.size
+    a square
 """
     def __init__(self, size):
-        self.size = size
+        """__init__
+        The __init__ method inlitialize the value
+        Attributes:
+            size (int): the size.
+        """
+        self.__size = size

@@ -5,7 +5,7 @@
 class Square:
     """what's a square and it's functionalities"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """New Square instance"""
         self.__size = size
         self.position = position
@@ -18,8 +18,8 @@ class Square:
     @size.setter
     def size(self, value):
         """sets the value, for size"""
-        if not isinstance(value, int): #checks that value's an int
-           raise TypeError("size must be an integer")
+        if not isinstance(value, int):  # checks that value's an int
+            raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value

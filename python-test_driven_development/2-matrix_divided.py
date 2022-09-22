@@ -19,8 +19,8 @@ def matrix_divided(matrix, div):
         lenR = len(elems)
         for block in elems:
             if type(block) is not int and type(block) is not float:
-                raise TypeError("matrix must be a matrix (list of lists)"
-                                "of integers/floats")
+                raise TypeError('matrix must be a matrix (list of lists)'
+                                ' of integers/floats')
             newBlock = block / div
             internMatx.append(round(newBlock, 2))
         biggestMatx.append(internMatx)

@@ -11,17 +11,15 @@ Using ''text_indentation''
     Traceback (most recent call last):
     TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-    >>> text_indentation("Holberton.School")
-    Holberton.
-    <BLANKLINE>
-    Holberton.School
+    >>> text_indentation("Denisse")
+    Denisse
 
-    >>> text_indentation("Holberton.School?How are you:John")
-    Holberton.
-    <BLANKLINE>
-    Holberton.School?
-    <BLANKLINE>
-    Holberton.School?How are you:
-    <BLANKLINE>
-    Holberton.School?How are you:John
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
 
+    >>> text_indentation("")
+
+    >>> text_indentation(555)
+    Traceback (most recent call last):
+    TypeError: text must be a string

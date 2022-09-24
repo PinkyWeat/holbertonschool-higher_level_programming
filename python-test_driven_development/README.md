@@ -20,11 +20,14 @@
 
 ### File Description
 
-- **0-add_integer.py** - contains function that adds 2 integers.
-- **0-add_integer.txt** - contains doctest corresponding to ``add_integer`` function
+First function + test case:
+    - **0-add_integer.py** - contains function that adds 2 integers.
+    - **0-add_integer.txt** - contains doctest corresponding to ``add_integer`` function
 
-- **2-matrix_divided.py** - contains function that divides all elements of a matrix.
-- **2-matrix_divided.txt** - contains doctest corresponding to ``matrix_divided`` function
+Matrix + test cases:
+    - **2-matrix_divided.py** - contains function that divides all elements of a matrix.
+    - **2-matrix_divided.txt** - contains doctest corresponding to ``matrix_divided`` function
+
 
 - **3-say_my_name.py** - contains function that prints My name is ``<first name>`` ``<last name>``
 - **3-say_my_name.txt** - contains doctest corresponding to ``say_my_name`` function

@@ -20,5 +20,6 @@ def text_indentation(text):
             begins = ends
         if specialChar is True and idx == len(text) - 1:
             print(text[begins:].lstrip(), end='')
+
     if specialChar is False:
         print(text.lstrip(), end="")

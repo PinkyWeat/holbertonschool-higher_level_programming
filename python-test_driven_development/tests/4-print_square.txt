@@ -17,7 +17,7 @@ Using ''print_square''
 
     >>> print_square("hello")
     Traceback (most recent call last):
-    TypeError: '<' not supported between instances of 'str' and 'int'
+    TypeError: size must be an integer
 
     >>> print_square()
     Traceback (most recent call last):

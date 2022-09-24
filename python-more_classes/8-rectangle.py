@@ -2,9 +2,6 @@
 """Python Interpreter"""
 
 
-from cmath import rect
-
-
 class Rectangle:
     """A class Rectangle with it's attributes"""
 

@@ -2,8 +2,24 @@
 
 ## Description
 
+The goal for this project personally is to get to know more about the testing of my own coding. ``Doctest`` usage at first is not what I expected for a type of testing to be, turned out to be super interesting and easy to use, pretty straight forward.
+
+The ``doctest`` module searches for pieces of text that look like interactive Python sessions, and then executes those sessions to verify that they work exactly as shown.
+
+In [this](https://docs.python.org/3.4/library/doctest.html) webpage they state these three main points on common ways to use ``doctest``:
+
+>- To check that a module’s docstrings are up-to-date by verifying that all interactive examples still work as documented.
+
+>- To perform regression testing by verifying that interactive examples from a test file or a test object work as expected.
+
+>- To write tutorial documentation for a package, liberally illustrated with input-output examples. Depending on whether the examples or the expository text are emphasized, this has the flavor of “literate testing” or “executable documentation”.
+
 ---
 
+>### Given permits: ``chmod u+x``
+>
+
+---
 ### Requirements
 
 - All files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
@@ -13,8 +29,11 @@
 - Length of files will be tested using ``wc``
 
 ---
+### Python Test Cases
 
-### Given permits: ``chmod u+x``
+- All files are under the ``/tests`` folder
+- All tests files are text files - extension ``.txt``
+- All test were executed using: ``python3 -m doctest ./tests/*``
 
 ---
 
@@ -45,3 +64,8 @@ Test files with ``doctest``:
 > **5-text_indentation.txt** - contains doctest corresponding to ``text_indentation`` function
 
   *// under construction site //*
+---
+
+## Author
+
+Written by [Denisse Landau](https://www.linkedin.com/in/denisselandau/ "Denisse Landau")

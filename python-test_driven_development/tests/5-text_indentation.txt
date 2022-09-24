@@ -19,6 +19,7 @@ Using ''text_indentation''
     TypeError: text must be a string
 
     >>> text_indentation("")
+    <BLANK_LINE>
 
     >>> text_indentation(555)
     Traceback (most recent call last):

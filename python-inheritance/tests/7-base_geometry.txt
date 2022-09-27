@@ -25,3 +25,41 @@ Using ''BaseGeometry''
     >>> c = BaseGeometry(7)
     Traceback (most recent call last):
     TypeError: BaseGeometry() takes no arguments
+
+    >>> a = BaseGeometry()
+    >>> a.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> b = BaseGeometry()
+    >>> b.integer_validator('D', [7])
+    Traceback (most recent call last):
+    TypeError: D must be an integer
+
+    >>> c = BaseGeometry()
+    >>> c.integer_validator('D', None)
+    Traceback (most recent call last):
+    TypeError: D must be an integer
+
+    >>> d = BaseGeometry()
+    >>> d.integer.integer_validator('Denisse', 7)
+
+    >>> d = BaseGeometry()
+    >>> d.integer_validator('Denisse', (7,))
+    Traceback (most recent call last):
+    TypeError: Denisse must be an integer
+
+    >>> e = BaseGeometry()
+    >>> e.integer_validator('Denisse', True)
+    Traceback (most recent call last):
+    TypeError: Denisse must be an integer
+
+    >>> f = BaseGeometry()
+    >>> f.integer_validator('Denisse', {3, 4})
+    Traceback (most recent call last):
+    TypeError: Denisse must be an integer
+
+    >>> g = BaseGeometry()
+    >>> g.integer_validator('Denisse', "Landau")
+    Traceback (most recent call last):
+    TypeError: Denisse must be an integer

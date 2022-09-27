@@ -3,7 +3,7 @@ The ''1-my_list.py'' module
 
 Using ''my_list''
 -------------------
->>> my_list = __import__('1-my_list.py').my_list
+>>> MyList = __import__('1-my_list.py').MyList
 
     >>> my_list = MyList()
     >>> my_list.append(1)

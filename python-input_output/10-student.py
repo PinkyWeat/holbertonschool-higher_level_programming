@@ -2,9 +2,6 @@
 """Module"""
 
 
-from re import L
-
-
 class Student:
     """student"""
 

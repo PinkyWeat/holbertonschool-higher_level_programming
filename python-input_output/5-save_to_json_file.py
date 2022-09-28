@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-"""Module"""
+"""Python interpreter"""
+
+
 import json
+"""JSON package"""
 
 
 def save_to_json_file(my_obj, filename):
-    """writes an Obj to text file, using JSON rep"""
-    with open(filename, 'w') as tempFile:
-        tempFile.write(json.dumps(my_obj))
+    """Serializes an object to a text file"""
+    with open(filename, 'w') as file:
+        file.write(json.dumps(my_obj))

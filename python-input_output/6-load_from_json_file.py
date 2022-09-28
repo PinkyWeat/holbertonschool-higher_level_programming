@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-"""Module"""
+"""Python interpreter"""
+
+
 import json
+"""JSON package"""
 
 
 def load_from_json_file(filename):
-    """creates an Object from a JSON file"""
-    with open(filename, 'r') as tempFile:
-        return json.load(tempFile)
+    """Creates an object from a JSON file"""
+    with open(filename, 'r') as file:
+        return json.load(file)

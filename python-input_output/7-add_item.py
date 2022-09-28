@@ -18,4 +18,4 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         for arg in sys.argv[1:]:
             theList.append(arg)
-        save_to_json_file(theList, fileInQuestion)
+    save_to_json_file(theList, fileInQuestion)

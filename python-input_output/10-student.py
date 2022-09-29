@@ -13,7 +13,14 @@ class Student:
 
     def to_json(self, attrs=None):
         """dictionary version of students"""
-        if isinstance(attrs, str):
-            for x in dict.items():
-                print(x[0])
-        return self.__dict__
+        self_dictionary = self.__dict__
+        ndict = {}
+
+        if attrs is None:
+            return self_dictionary
+
+        if type(attrs) is list:
+            for elems in attrs:
+                if hasattr(self, elems):
+                    ndict[elems] = getattr(self, elems)
+            return ndict

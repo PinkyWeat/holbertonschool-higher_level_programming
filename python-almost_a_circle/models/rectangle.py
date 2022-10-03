@@ -141,3 +141,7 @@ class Rectangle(Base):
                     self.__x = value
                 if key == "y":
                     self.__y = value
+
+    def to_dictionary(self):
+        """returns the dictonary rep"""
+        return self.__dict__

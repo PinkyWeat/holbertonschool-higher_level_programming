@@ -111,7 +111,7 @@ class Rectangle(Base):
             print()
         for n in range(0, self.__height):
             for ex in range(self.__x):
-                print("#", end="")
+                print("", end="")
             for more in range(self.__width):
                 print("#", end="")
             print()

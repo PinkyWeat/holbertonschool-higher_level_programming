@@ -11,7 +11,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        return f"[Square] {self.x}/{self.y} - {self.__width}"
+        return f"[Square] {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
@@ -21,5 +21,5 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Set private size attribute"""
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value

@@ -20,8 +20,35 @@ class Square(Rectangle):
         """New property"""
         return self.width
 
+    @size.getter
+    def size(self):
+        """sets size"""
+        return self.size
+
     @size.setter
     def size(self, value):
         """Set private size attribute"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """updates Square data"""
+        length = len(args)
+        if length > 0:
+            self.id = args[0]
+            if length > 1:
+                self.size = args[1]
+            if length > 3:
+                self.x = args[2]
+            if length > 4:
+                self.y = args[3]
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "size":
+                    self.size = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value

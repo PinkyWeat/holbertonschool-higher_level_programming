@@ -101,4 +101,4 @@ class Rectangle(Base):
         if value <= 0 and name in ("width", "height"):
             raise ValueError(f"{name} must be > 0")
         if value < 0 and name in ("x", "y"):
-            raise ValueError(f"{name} must be > 0")
+            raise ValueError(f"{name} must be >= 0")

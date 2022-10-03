@@ -107,7 +107,11 @@ class Rectangle(Base):
 
     def display(self):
         """displays the Rectangle using #"""
+        for whys in range(self.__y):
+            print()
         for n in range(0, self.__height):
-            for more in range(0, self.__width):
+            for ex in range(self.__x):
+                print("#", end="")
+            for more in range(self.__width):
                 print("#", end="")
             print()

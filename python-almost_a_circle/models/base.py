@@ -9,7 +9,7 @@ class Base:
 
     def __init__(self, id=None):
         """new initialization"""
-        if id is None:
+        if id is not None:
             self.id = id
         else:
             __nb_objects += 1

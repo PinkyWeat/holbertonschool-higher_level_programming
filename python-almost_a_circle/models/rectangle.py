@@ -120,7 +120,7 @@ class Rectangle(Base):
         """update arguments"""
         length = len(args)
         if (length > 0):
-            self.__id = args[0]
+            self.id = args[0]
             if length > 1:
                 self.__width = args[1]
             if length > 2:

@@ -115,3 +115,17 @@ class Rectangle(Base):
             for more in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """update arguments"""
+        length = len(args)
+        if (length > 0):
+            self.__id = args[0]
+            if length > 1:
+                self.__width = args[1]
+            if length > 2:
+                self.__height = args[2]
+            if length > 3:
+                self.__x = args[3]
+            if length > 4:
+                self.__y = args[4]

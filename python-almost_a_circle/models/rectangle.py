@@ -30,6 +30,10 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """width setter"""
+        if type(width) is not int:
+            raise TypeError("width of the attribute > must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = width
         return self.__width
 
@@ -47,6 +51,10 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """height setter"""
+        if type(height) is not int:
+            raise TypeError("height of the attribute > must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = height
         return self.__height
 
@@ -64,6 +72,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """height setter"""
+        if type(x) is not int:
+            raise TypeError("x of the attribute > must be an integer")
+        if x < 0:
+            raise ValueError("x must be > 0")
         self.__x = x
         return self.__x
 
@@ -81,5 +93,9 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """height setter"""
+        if type(y) is not int:
+            raise TypeError("y of the attribute > must be an integer")
+        if y < 0:
+            raise ValueError("y must be > 0")
         self.__y = y
         return self.__y

@@ -8,15 +8,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """new init"""
-        self.errors(width, "width")
-        self.errors(height, "height")
-        self.errors(x, "x")
-        self.errors(y, "y")
-
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = self.errors(width, "width")
+        self.__height = self.errors(height, "height")
+        self.__x = self.errors(x, "x")
+        self.__y = self.errors(y, "y")
         super().__init__(id)
 
     def __str__(self):
@@ -104,6 +99,7 @@ class Rectangle(Base):
             raise ValueError(f"{name} must be > 0")
         if value < 0 and name in ("x", "y"):
             raise ValueError(f"{name} must be >= 0")
+        return value
 
     def area(self):
         """calcs area of Rectanglee"""

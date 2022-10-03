@@ -14,6 +14,11 @@ class Rectangle(Base):
         self.__height = self.errors(height, "height")
         self.__x = self.errors(x, "x")
         self.__y = self.errors(y, "y")
+
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         super().__init__(id)
 
 

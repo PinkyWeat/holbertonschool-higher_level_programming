@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Python Interpreter"""
-
-
 from models.base import Base
 
 
@@ -20,7 +18,6 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-
 
     @property
     def width(self, width):

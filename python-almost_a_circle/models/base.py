@@ -19,7 +19,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """formats to JSON for sharing data"""
         if list_dictionaries is None:
-            return []
+            return "[]"
         else:
             jeison = json.dumps(list_dictionaries)
         return jeison

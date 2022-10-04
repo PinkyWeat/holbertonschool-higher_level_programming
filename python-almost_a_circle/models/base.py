@@ -45,10 +45,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set"""
-
-    @classmethod
-    def create(cls, **dictionary):
         """Returns an instance with all atributes already set"""
         if cls.__name__ == 'Rectangle':
             newInstance = cls(1, 1)

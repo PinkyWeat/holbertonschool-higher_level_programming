@@ -40,4 +40,5 @@ class Base:
         if json_string is None:
             return []
         else:
-            return json.dumps(json_string)
+            jeisonlist = json.dumps(json_string)
+            return jeisonlist

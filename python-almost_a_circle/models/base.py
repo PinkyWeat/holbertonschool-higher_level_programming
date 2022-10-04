@@ -24,3 +24,12 @@ class Base:
         else:
             jeison = json.dumps(list_dictionaries)
         return jeison
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Json string to file"""
+        if list_objs is not None:
+            list_objs = [elements.to_dictionary() for elements in list_objs]
+        with open("{}.json".format(cls.__name__), "w") \
+                as tempFile:
+            tempFile.write(cls.to_json_string(list_objs))

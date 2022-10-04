@@ -70,4 +70,4 @@ class Base:
                     listIntances.append(cls.create(**element))
                 return listIntances
         else:
-            return
+            return instances

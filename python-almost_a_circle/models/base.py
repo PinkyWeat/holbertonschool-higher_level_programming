@@ -37,8 +37,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of JSON string"""
+        jeisonlist = []
         if json_string is None:
-            return []
+            return jeisonlist
         else:
             jeisonlist = json.dumps(json_string)
             return jeisonlist

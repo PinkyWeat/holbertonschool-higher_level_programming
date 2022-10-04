@@ -22,4 +22,4 @@ class Base:
             return []
         else:
             jeison = json.dumps(list_dictionaries)
-            return jeison
+        return jeison

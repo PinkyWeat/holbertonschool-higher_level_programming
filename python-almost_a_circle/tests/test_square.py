@@ -112,14 +112,14 @@ class TestSquareSaveToFile(unittest.TestCase):
 
     def setUp(self):
         self.s = Square(1)
-        self.s2 = Square(1)
+        self.s2 = Square(3)
 
     def test_0(self):
-        self.s.save_to_file([])
+        Square.save_to_file([])
         with open("Square.json") as tempFile:
             self.assertEqual('[]', tempFile.read())
 
     def test_01(self):
-        self.s2.save_to_file(None)
+        Square.save_to_file(None)
         with open("Square.json") as tempFile:
             self.assertEqual('[]', tempFile.read())

@@ -120,7 +120,7 @@ class TestRectangleCreate(unittest.TestCase):
         self.r1 = self.r.create(**{ 'id': 89, 'width': 1 })
         self.assertEqual(self.r1.id, 89)
         self.assertEqual(self.r1.width, 1)
-        Rectangle.save_to_file([])
+
 
 class TestRectangleSaveToFile(unittest.TestCase):
     """tests save to file from Rectangle"""
@@ -140,3 +140,6 @@ class TestRectangleSaveToFile(unittest.TestCase):
         with open("Rectangle.json") as temporary:
             self.assertEqual(
                 '[{"id": 14, "width": 1, "height": 2, "x": 0, "y": 0}]', temporary.read())
+
+    def test_1(self):
+        Rectangle.save_to_file([])

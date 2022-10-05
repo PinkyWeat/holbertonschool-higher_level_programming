@@ -59,3 +59,21 @@ class TestRectangleArea(unittest.TestCase):
 
     def test_1(self):
         self.assertEqual(self.r.area(), 2)
+
+class TestRectangleSTR(unittest.TestCase):
+    """test the str method"""
+    def setUp(self):
+        self.r = Rectangle(1, 2, 3, 4, 5)
+
+    def test_1(self):
+        self.assertEqual(self.r.__str__(), '[Rectangle] (5) 3/4 - 1/2')
+
+class TestRectangleDisplay(unittest.TestCase):
+    """test the display method"""
+    def test_1(self):
+        self.r = Rectangle(1, 2)
+        self.assertEqual(self.r.display(), None)
+
+    def test_1b(self):
+        self.r = Rectangle(1, 2, 3)
+        self.assertEqual(self.r.display(), None)

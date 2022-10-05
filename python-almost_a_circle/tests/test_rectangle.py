@@ -72,5 +72,5 @@ class TestRectangleDisplay(unittest.TestCase):
     """test the display method"""
 
     def test_0(self):
-        rd1 = Rectangle(2, 1, 0, 0)
-        self.assertEqual(rd1.display(), None)
+        self.r = Rectangle(2, 1, 0, 0)
+        self.assertEqual(self.r.display(), '##\n')

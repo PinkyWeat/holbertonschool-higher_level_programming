@@ -48,3 +48,49 @@ class TestSquare(unittest.TestCase):
         self.assertRaises(ValueError, Square, -1)
         self.assertRaises(ValueError, Square, 1, -2)
         self.assertRaises(ValueError, Square, 1, 2, -3)
+
+
+class TestSquareSTR(unittest.TestCase):
+    """test the str method"""
+
+    def setUp(self):
+        self.s = Square(1, 2, 3, 4)
+
+    def test_1(self):
+        self.assertEqual(self.s.__str__(), '[Square] (4) 2/3 - 1')
+
+
+class TestSquareToDictonary(unittest.TestCase):
+    """testss to_dict method"""
+
+    def test_0(self):
+        s = Square(1, 2, 3, 4)
+        self.assertEqual(s.to_dictionary(), {
+                         'id': 4, 'size': 1, 'x': 2, 'y': 3})
+
+
+class TestSquareUpdate(unittest.TestCase):
+    """tests update method"""
+
+    def test_0(self):
+        self.s = Square(25, 6)
+        self.s.update()
+        self.assertEqual(self.s.id, 19)
+        self.s.update(89)
+        self.assertEqual(self.s.id, 89)
+        self.s.update(89, 1)
+        self.assertEqual(self.s.id, 89)
+        self.assertEqual(self.s.size, 1)
+        self.s.update(89, 1, 2)
+        self.assertEqual(self.s.id, 89)
+        self.assertEqual(self.s.size, 1)
+        self.assertEqual(self.s.x, 2)
+        self.s.update(89, 1, 2, 3)
+        self.assertEqual(self.s.id, 89)
+        self.assertEqual(self.s.size, 1)
+        self.assertEqual(self.s.x, 2)
+        self.assertEqual(self.s.y, 3)
+
+        self.s.update(**{ 'id': 89, 'size': 1 })
+        self.assertEqual(self.s.id, 89)
+        self.assertEqual(self.s.size, 1)

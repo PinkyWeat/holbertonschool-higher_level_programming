@@ -84,3 +84,5 @@ class TestRectangleDisplay(unittest.TestCase):
         r = Rectangle(2, 1, 2, 3)
         with io.StringIO() as test, redirect_stdout(test):
             r.display()
+            output = test.getvalue()
+            self.assertEqual(output, "\n\n\n  ##\n")

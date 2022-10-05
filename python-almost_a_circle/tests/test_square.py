@@ -75,7 +75,7 @@ class TestSquareUpdate(unittest.TestCase):
     def test_0(self):
         self.s = Square(25, 6)
         self.s.update()
-        self.assertEqual(self.s.id, 21)
+        self.assertEqual(self.s.id, 22)
         self.s.update(89)
         self.assertEqual(self.s.id, 89)
         self.s.update(89, 1)

@@ -144,3 +144,6 @@ class TestRectangleSaveToFile(unittest.TestCase):
         with open("Rectangle.json") as temporary:
             self.assertEqual(
                 '[{"id": 15, "width": 1, "height": 2, "x": 0, "y": 0}]', temporary.read())
+
+if __name__ == '__main__':
+    unittest.main()

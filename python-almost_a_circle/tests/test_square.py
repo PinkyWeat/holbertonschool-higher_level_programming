@@ -126,5 +126,12 @@ class TestSquareLoad(unittest.TestCase):
         lf = Square.load_from_file()
         self.assertTrue(isinstance(lf, list))
 
+class TestMe(unittest.TestCase):
+    def test_saveempty(self):
+        listita = []
+        Square.save_to_file(listita)
+        with open("Square.json") as temp:
+            self.assertEqual('[]', temp.read())
+
 if __name__ == '__main__':
     unittest.main()

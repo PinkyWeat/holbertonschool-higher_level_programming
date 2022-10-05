@@ -103,9 +103,20 @@ class TestRectangleUpdate(unittest.TestCase):
     def test_0(self):
         self.r = Rectangle(25, 6)
         self.r.update()
-        self.assertEqual(self.r.id, 12)
+        self.assertEqual(self.r.id, 14)
         self.r.update(89)
         self.assertEqual(self.r.id, 89)
         self.r.update(89, 1)
         self.assertEqual(self.r.id, 89)
         self.assertEqual(self.r.width, 1)
+
+class TestRectangleCreate(unittest.TestCase):
+    """tests create method"""
+
+    def setUp(self):
+        self.r = Rectangle(25, 6)
+
+    def test_2(self):
+        self.r1 = self.r.create(**{ 'id': 89, 'width': 1 })
+        self.assertEqual(self.r1.id, 89)
+        self.assertEqual(self.r1.width, 1)

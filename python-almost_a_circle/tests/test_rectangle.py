@@ -120,6 +120,7 @@ class TestRectangleCreate(unittest.TestCase):
         self.r1 = self.r.create(**{ 'id': 89, 'width': 1 })
         self.assertEqual(self.r1.id, 89)
         self.assertEqual(self.r1.width, 1)
+        Rectangle.save_to_file([])
 
 class TestRectangleSaveToFile(unittest.TestCase):
     """tests save to file from Rectangle"""

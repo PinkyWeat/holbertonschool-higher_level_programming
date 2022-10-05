@@ -63,6 +63,11 @@ class TestRectangleArea(unittest.TestCase):
     def test_1(self):
         self.assertEqual(self.r.area(), 2)
 
+    def test_01(self):
+        r1 = Rectangle.save_to_file(None)
+        with open("Rectangle.json") as tempFile2:
+            self.assertEqual('[]', tempFile2.read())
+
 class TestRectangleSTR(unittest.TestCase):
     """test the str method"""
 
@@ -120,11 +125,6 @@ class TestRectangleCreate(unittest.TestCase):
         self.r1 = self.r.create(**{ 'id': 89, 'width': 1 })
         self.assertEqual(self.r1.id, 89)
         self.assertEqual(self.r1.width, 1)
-
-    def test_01(self):
-        r1 = Rectangle.save_to_file(None)
-        with open("Rectangle.json") as tempFile2:
-            self.assertEqual('[]', tempFile2.read())
 
 
 class TestRectangleSaveToFile(unittest.TestCase):

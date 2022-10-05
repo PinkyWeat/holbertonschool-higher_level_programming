@@ -56,6 +56,7 @@ class TestRectangle1(unittest.TestCase):
 
 class TestRectangleArea(unittest.TestCase):
     """tests the area method"""
+
     def setUp(self):
         self.r = Rectangle(1, 2)
 
@@ -64,6 +65,7 @@ class TestRectangleArea(unittest.TestCase):
 
 class TestRectangleSTR(unittest.TestCase):
     """test the str method"""
+
     def setUp(self):
         self.r = Rectangle(1, 2, 3, 4, 5)
 
@@ -86,3 +88,18 @@ class TestRectangleDisplay(unittest.TestCase):
             r.display()
             output = test.getvalue()
             self.assertEqual(output, "\n\n\n  ##\n")
+
+class TestRectangleToDictonary(unittest.TestCase):
+    """testss to_dict method"""
+
+    def test_0(self):
+        r = Rectangle(2, 1, 2, 3, 5)
+        self.assertEqual(r.to_dictionary(), {
+                         'id': 5, 'width': 2, 'height': 1, 'x': 2, 'y': 3})
+
+class TestRectangleUpdate(unittest.TestCase):
+    """tests update method"""
+
+    def test_0(self):
+        r = Rectangle(2, 1, 2, 3, 5)
+        self.assertEqual(r.update(), None)

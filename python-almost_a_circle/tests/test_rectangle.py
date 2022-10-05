@@ -138,10 +138,3 @@ class TestRectangleSaveToFile(unittest.TestCase):
         with open("Rectangle.json") as temporary:
             self.assertEqual(
                 '[{"id": 15, "width": 1, "height": 2, "x": 0, "y": 0}]', temporary.read())
-
-class TestRectangleLoad(unittest.TestCase):
-    """tests load from Rectangle"""
-
-    def test_0(self):
-        loadFile = Rectangle.load_from_file()
-        self.assertTrue(isinstance(loadFile, list))

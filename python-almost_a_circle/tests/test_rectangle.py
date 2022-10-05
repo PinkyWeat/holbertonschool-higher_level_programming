@@ -101,5 +101,11 @@ class TestRectangleUpdate(unittest.TestCase):
     """tests update method"""
 
     def test_0(self):
-        r = Rectangle(2, 1, 2, 3, 5)
-        self.assertEqual(r.update(), None)
+        self.r = Rectangle(25, 6)
+        self.r.update()
+        self.assertEqual(self.r.id, 12)
+        self.r.update(89)
+        self.assertEqual(self.r.id, 89)
+        self.r.update(89, 1)
+        self.assertEqual(self.r.id, 89)
+        self.assertEqual(self.r.width, 1)

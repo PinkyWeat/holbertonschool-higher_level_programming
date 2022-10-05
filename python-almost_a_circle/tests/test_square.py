@@ -75,7 +75,7 @@ class TestSquareUpdate(unittest.TestCase):
     def test_0(self):
         self.s = Square(25, 6)
         self.s.update()
-        self.assertEqual(self.s.id, 19)
+        self.assertEqual(self.s.id, 21)
         self.s.update(89)
         self.assertEqual(self.s.id, 89)
         self.s.update(89, 1)
@@ -94,3 +94,14 @@ class TestSquareUpdate(unittest.TestCase):
         self.s.update(**{ 'id': 89, 'size': 1 })
         self.assertEqual(self.s.id, 89)
         self.assertEqual(self.s.size, 1)
+
+class TestSquareCreate(unittest.TestCase):
+    """tests create method"""
+
+    def setUp(self):
+        self.s = Square(25, 6)
+
+    def test_2(self):
+        self.s1 = self.s.create(**{'id': 89, 'size': 1})
+        self.assertEqual(self.s1.id, 89)
+        self.assertEqual(self.s1.size, 1)

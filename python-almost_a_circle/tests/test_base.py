@@ -2,7 +2,6 @@
 """Unittest moment"""
 import unittest
 from models.base import Base
-from models.square import Square
 
 class TestBase(unittest.TestCase):
     """this will test the id attribute"""

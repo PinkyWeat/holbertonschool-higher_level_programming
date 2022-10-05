@@ -128,6 +128,4 @@ class TestRectangleSaveToFile(unittest.TestCase):
         self.r = Rectangle(1, 2, 3, 4, 5)
 
     def test_0(self):
-        self.assertEqual(self.r.to_dictionary(), {
-                         'id': 5, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(self.r.save_to_file(None), None)

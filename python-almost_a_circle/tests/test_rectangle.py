@@ -129,12 +129,12 @@ class TestRectangleSaveToFile(unittest.TestCase):
         self.r = Rectangle(1, 2, 3, 4, 5)
 
     def test_00(self):
-        Rectangle.save_to_file(None)
+        Rectangle.save_to_file([])
         with open("Rectangle.json") as tempFile:
             self.assertEqual('[]', tempFile.read())
 
     def test_01(self):
-        Rectangle.save_to_file([])
+        Rectangle.save_to_file(None)
         with open("Rectangle.json") as tempFile2:
             self.assertEqual('[]', tempFile2.read())
 

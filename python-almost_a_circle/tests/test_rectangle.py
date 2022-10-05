@@ -80,7 +80,7 @@ class TestRectangleDisplay(unittest.TestCase):
             output = test.getvalue()
             self.assertEqual(output, "##\n")
 
-    def test_0(self):
+    def test_1(self):
         r = Rectangle(2, 1, 2, 3)
         with io.StringIO() as test, redirect_stdout(test):
             r.display()

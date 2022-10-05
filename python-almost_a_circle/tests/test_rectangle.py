@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Python Interpreter"""
+from contextlib import redirect_stdout
+import io
 import unittest
 from models.rectangle import Rectangle
 
@@ -72,5 +74,8 @@ class TestRectangleDisplay(unittest.TestCase):
     """test the display method"""
 
     def test_0(self):
-        self.r = Rectangle(2, 1, 0, 0)
-        self.assertEqual(self.r.display(), None)
+        r = Rectangle(2, 1, 0, 0)
+        with io.StringIO() as test, redirect_stdout(test):
+            r.display()
+            output = test.getvalue()
+            self.assertEqual(output, "##\n")

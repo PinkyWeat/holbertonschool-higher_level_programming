@@ -75,7 +75,7 @@ class TestSquareUpdate(unittest.TestCase):
     def test_0(self):
         self.s = Square(25, 6)
         self.s.update()
-        self.assertEqual(self.s.id, 22)
+        self.assertEqual(self.s.id, 26)
         self.s.update(89)
         self.assertEqual(self.s.id, 89)
         self.s.update(89, 1)
@@ -105,3 +105,21 @@ class TestSquareCreate(unittest.TestCase):
         self.s1 = self.s.create(**{'id': 89, 'size': 1})
         self.assertEqual(self.s1.id, 89)
         self.assertEqual(self.s1.size, 1)
+
+
+class TestSquareSaveToFile(unittest.TestCase):
+    """tests save to file from Square"""
+
+    def setUp(self):
+        self.s = Square(1)
+        self.s2 = Square(1)
+
+    def test_0(self):
+        self.s.save_to_file([])
+        with open("Square.json") as tempFile:
+            self.assertEqual('[]', tempFile.read())
+
+    def test_01(self):
+        self.s2.save_to_file([])
+        with open("Square.json") as tempFile:
+            self.assertEqual('[]', tempFile.read())

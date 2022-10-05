@@ -120,6 +120,6 @@ class TestSquareSaveToFile(unittest.TestCase):
             self.assertEqual('[]', tempFile.read())
 
     def test_01(self):
-        self.s2.save_to_file([])
+        self.s2.save_to_file(None)
         with open("Square.json") as tempFile:
             self.assertEqual('[]', tempFile.read())

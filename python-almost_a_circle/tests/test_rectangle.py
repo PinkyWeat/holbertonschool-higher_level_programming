@@ -51,3 +51,11 @@ class TestRectangle1(unittest.TestCase):
         self.assertRaises(ValueError, Rectangle, 1, 0)
         self.assertRaises(ValueError, Rectangle, 1, 2, -3)
         self.assertRaises(ValueError, Rectangle, 1, 2, 3, -4)
+
+class TestRectangleArea(unittest.TestCase):
+    """tests the area method"""
+    def setUp(self):
+        self.r = Rectangle(1, 2)
+
+    def test_1(self):
+        self.assertEqual(self.r.area(), 2)

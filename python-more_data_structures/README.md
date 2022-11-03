@@ -3,7 +3,7 @@
 
 ## Description
 
-*// under construction site //*
+In this project we are re-visiting the basics on data structures and more.
 
 ---
 

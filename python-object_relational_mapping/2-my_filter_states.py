@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Python Module"""
-import MySQLdataB
+import MySQLdb
 from sys import argv
 
 

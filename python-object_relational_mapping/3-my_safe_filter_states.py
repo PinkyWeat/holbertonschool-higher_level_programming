@@ -7,7 +7,7 @@ from sys import argv
 """SQL Query"""
 if __name__ == "__main__":
     dataB = MySQLdb.connect(
-        host="localhost"
+        host="localhost",
         port=3306,
         user=argv[1],
         password=arg[2],

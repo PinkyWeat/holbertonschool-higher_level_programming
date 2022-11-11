@@ -21,5 +21,4 @@ if __name__ == "__main__":
     result = cursor.fetchall()
 
     for row in result:
-        if row[1] == argv[4]:
-            print(row)
+        print(row)

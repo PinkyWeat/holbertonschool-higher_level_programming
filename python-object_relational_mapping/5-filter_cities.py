@@ -15,10 +15,15 @@ if __name__ == "__main__":
         )
 
     cursor = dataB.cursor()
-    cursor.execute("""SELECT cities.id, cities.name, states.name
-    FROM cities JOIN states ON cities.state_id = states.id
-    ORDER BY cities.id ASC""")
+    cursor.execute("SELECT cit.name FROM cities cit \
+        LEFT JOIN states st ON cit.st_id = s.id \
+        WHERE s.name = %s \
+        ORDER BY c.id", (sys.argv[4], ))
     result = cursor.fetchall()
-
-    for row in result:
-        print(row)
+    for i, record in enumerate(result):
+        if i > 0:
+            print(', ', end='')
+        print(str(record[0]), end='')
+    print()
+    cursor.close()
+    dataB.close()

@@ -10,7 +10,7 @@ if __name__ == "__main__":
         port=3306,
         user=argv[1],
         password=argv[2],
-        dataB=argv[3]
+        database=argv[3]
         )
     cursor = dataB.cursor()
     cursor.execute('''SELECT id, name FROM states WHERE name LIKE 'N%'

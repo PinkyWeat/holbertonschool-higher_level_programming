@@ -3,6 +3,7 @@
 import MySQLdb
 from sys import argv
 
+
 """SQL Query"""
 if __name__ == "__main__":
     dataB = MySQLdb.connect(
@@ -15,7 +16,7 @@ if __name__ == "__main__":
     cursor = dataB.cursor()
     cursor.execute('''SELECT id, name FROM states WHERE name LIKE 'N%'
     ORDER BY states.id ASC;''')
-    result = cursor.fetchall
+    result = cursor.fetchall()
 
     for row in result:
         if row[1][0] == "N":

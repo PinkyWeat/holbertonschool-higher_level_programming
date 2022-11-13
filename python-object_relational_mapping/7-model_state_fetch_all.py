@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""aaaaa"""
+"""aaaaaaaaa"""
 
 from sys import argv
 from model_state import Base, State

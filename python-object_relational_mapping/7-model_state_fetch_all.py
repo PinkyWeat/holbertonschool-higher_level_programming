@@ -1,29 +1,27 @@
 #!/usr/bin/python3
-"""MODULE NAME"""
+"""
+Module 7-model_state_fetch_all
+"""
 
-
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 from sys import argv
 from model_state import Base, State
-
-
-Base = declarative_base()
-
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
+    """Connect to database hbtn_0e_0_usa and
+    lists all cities from the database"""
 
-    engine = create_engine(
-        f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
-    Base.metadata.create_all(bind=engine)
-
+    try:
+        engine = create_engine(
+            'mysql+mysqldb://{}:{}@localhost:3306/{}'
+            .format(argv[1], argv[2], argv[3]), pool_pre_ping=True
+        )
+    except Exception:
+        print("Error")
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    session = Session()
-
-    result = session.query(State).all()
-
-    for item in result:
-        print(f'{item.id}: {item.name}')
-
-    session.close()
+    ses = Session()
+    for i in ses.query(State).order_by(State.id).all():
+        print(f"{i.id}: {i.name}")
+    ses.close()

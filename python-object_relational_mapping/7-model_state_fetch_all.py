@@ -1,24 +1,23 @@
 #!/usr/bin/python3
-"""Module lists all State objs"""
+"""Module"""
+
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-
-    """New Connection"""
-    master = create_engine(
-        f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}')
-
-    """Creo las tablas"""
-    Base.metadata.create_all(master)
-
-    """Relacionar conexion y modelos"""
-    Session = sessionmaker(master)
-    newSession = Session()
-
-    """Consulto la base de datos"""
-    states = newSession.query(State).order_by(State.id)
-    for eaach in states:
-        print(f"{eaach.id}: {eaach.name}")
+    """new Connection"""
+    try:
+        engine = create_engine(
+            'mysql+mysqldb://{}:{}@localhost:3306/{}'
+            .format(argv[1], argv[2], argv[3]), pool_pre_ping=True
+        )
+    except Exception:
+        print("Error")
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    ses = Session()
+    for i in ses.query(State).order_by(State.id).all():
+        print(f"{i.id}: {i.name}")
+    ses.close()

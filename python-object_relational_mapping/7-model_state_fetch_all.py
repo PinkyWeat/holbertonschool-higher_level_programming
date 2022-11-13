@@ -10,8 +10,8 @@ if __name__ == '__main__':
     """NEW CONNECTION"""
     try:
         engine = create_engine(
-            'mysql+mysqldb://{}:{}@localhost:3306/{}'
-            .format(argv[1], argv[2], argv[3]), pool_pre_ping=True
+            f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}',
+            pool_pre_ping=True
         )
     except Exception:
         print("Error")

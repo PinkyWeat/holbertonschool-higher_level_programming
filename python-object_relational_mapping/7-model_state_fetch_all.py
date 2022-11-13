@@ -17,3 +17,4 @@ if __name__ == '__main__':
     for i in ses.query(State).order_by(State.id).all():
         print(f"{i.id}: {i.name}")
     ses.close()
+

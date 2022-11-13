@@ -10,13 +10,8 @@ if __name__ == "__main__":
     list all cities in state"""
 
     try:
-        dataB = MySQLdb.connect(
-            host="localhost",
-            port=3306,
-            user=argv[1],
-            password=argv[2],
-            dataB=argv[3]
-        )
+        dataB = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                             password=argv[2], dataB=argv[3])
     except Exception:
         print("Error")
 

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Modulee"""
+"""MODULE NAME"""
 
 
 from sqlalchemy import create_engine

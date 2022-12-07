@@ -7,6 +7,5 @@ while (len > 2) {
 } // copy paste of given nums
 
 sorted = sorted.sort((a, b) => a - b); // sorting for easier comparison
-console.log(sorted);
 const res = sorted[sorted.length - 2]; // process.argv.length - 4 works
 console.log(res);

@@ -11,7 +11,7 @@ if (process.argv[3]) {
   const res = sorted[sorted.length - 2]; // process.argv.length - 4 works
   console.log(res);
 } else if (process.argv[2]) {
-  console.log(process.argv[2]);
+  console.log(0);
 } else {
   console.log(0);
 }

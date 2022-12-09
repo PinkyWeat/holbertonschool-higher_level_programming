@@ -11,7 +11,7 @@ module.exports = class Rectangle {
     // first will concat width
     let guith = '';
     for (let uith = 0; uith < this.width; uith++) {
-      guith += 'X';
+      guith += 'c';
     }
     // then print the width * height times
     for (let jait = 0; jait < this.height; jait++) {

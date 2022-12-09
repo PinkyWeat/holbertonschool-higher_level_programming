@@ -7,6 +7,6 @@ module.exports = class Square extends Esquer {
   }
 
   charPrint (c = 'X') {
-      this.print(c);
+    this.print(c);
   }
 };

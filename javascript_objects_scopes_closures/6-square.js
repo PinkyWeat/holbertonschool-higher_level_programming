@@ -7,7 +7,7 @@ module.exports = class Square extends Esquer {
   }
 
   charPrint (c) {
-    if (c === undefined) {
+    if (!c) {
       console.log('X');
     } else {
       super.print(c);

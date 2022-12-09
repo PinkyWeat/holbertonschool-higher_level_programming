@@ -7,7 +7,7 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (c = 'X') {
     // first will concat width
     let guith = '';
     for (let uith = 0; uith < this.width; uith++) {

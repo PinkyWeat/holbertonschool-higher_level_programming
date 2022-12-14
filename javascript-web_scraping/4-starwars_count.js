@@ -12,7 +12,7 @@ request.get(url, function (err, response, body) {
       let count = 0;
       for (const each of data) {
         for (const chars of each.characters) {
-          if (chars.endWith('/18/')) {
+          if (chars.endsWith('/18/')) {
             ++count;
           }
         }

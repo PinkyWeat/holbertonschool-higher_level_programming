@@ -1,8 +1,9 @@
 #!/usr/bin/node
 const request = require('request');
-// const url = 'https://swapi-api.hbtn.io/api/films/';
+const url = 'https://swapi-api.hbtn.io/api/films/';
+const urlChar = 'https://swapi-api.hbtn.io/api/films/18/';
 
-request('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
+request(url, function (err, response, body) {
   if (err) {
     throw err;
   } else {
@@ -11,7 +12,7 @@ request('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
       let count = 0;
       for (const each of data) {
         for (const chars of each.characters) {
-          if (chars.endsWith('/18/')) {
+          if (urlChar === chars) {
             ++count;
           }
         }

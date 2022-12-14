@@ -13,12 +13,9 @@ request('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
         for (const chars of each.characters) {
           if (chars.endsWith('/18/')) {
             ++count;
-            console.log(chars);
-            console.log('xdxdxdxd');
           }
         }
       }
-      console.log(count);
       return count;
     }
   }

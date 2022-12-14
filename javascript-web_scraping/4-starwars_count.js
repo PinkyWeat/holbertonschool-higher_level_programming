@@ -4,7 +4,7 @@ const request = require('request');
 
 request('https://swapi-api.hbtn.io/api/films/', function (err, response, body) {
   if (err) {
-    return console.log(err + ' ' + response.statusCode);
+    throw err;
   } else {
     if (response.statusCode === 200) {
       const data = JSON.parse(body).results;

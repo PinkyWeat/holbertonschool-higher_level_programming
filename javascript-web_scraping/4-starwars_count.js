@@ -10,8 +10,8 @@ request(url, function (err, response, body) {
     if (response.statusCode === 200) {
       const data = JSON.parse(body).results;
       let count = 0;
-      for (const each of data) {
-        for (const chars of each.characters) {
+      for (let each of data) {
+        for (let chars of each.characters) {
           if (urlChar === chars) {
             ++count;
           }
